@@ -7,6 +7,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { LinksFunction } from "@remix-run/react/dist/routeModules";
+import styles from "./styles/app.css"
+
+
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: styles }]
+}
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
